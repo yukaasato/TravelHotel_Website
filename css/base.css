@@ -1,0 +1,546 @@
+@charset "utf-8";
+
+/*
+=======================================
+�L�q���[��
+=======================================
+�Z���N�^��html�̋L�q���ɏ���
+�v���p�e�B�̓A���t�@�x�b�g���ɏ���
+�v���p�e�B�ƃo�����[�̊Ԃ͋󂯂�
+*/
+
+/*
+=======================================
+  Reset CSS
+=======================================
+*/
+*{
+ margin:0;
+ padding:0;
+}
+* {
+font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+article,aside,details,figcaption,figure,
+footer,header,main,menu,nav,section{
+ display: block;
+}
+html{
+ -webkit-text-size-adjust: 100%;
+ text-size-adjust: 100%;
+}
+a{
+ text-decoration: none;color: #333;
+}
+li{
+ list-style: none;
+}
+*{*
+ font-family: ������,"Yu Mincho",YuMincho,
+ "Hiragino Mincho ProN","Hiragino Mincho Pro",
+ HGS����E,���C���I,Meiryo,serif;
+}
+/*---�w�b�_�[�̐ݒ�---------------------------------*/
+
+/*
+���C���r�W���A���̗v�f�������锠
+ (�e�v�f�F.topWrapper)
+�i�q�v�f�F.�w�b�_�[���̃��X�g�j
+*/
+.container{
+  margin: 0 auto;
+  width:1170px;
+  /*background-color: skyblue;*/
+}
+/*
+���C���r�W���A���̉摜�̐ݒ��@�ŉ��w���C���[
+ (�e�v�f�Fbody)
+�i�q�v�f�F.container�Aul�Ali)
+*/
+.topWrapper{
+ background-image: url("../img/mainAutom.jpg");
+ background-image: url("../img/mainSnow.jpg");
+ background-image: url("../img/mainOnsen.jpg");
+ background-image: url("../img/mainRoom.jpg");
+ background-image: url("../img/mainSnow.jpg");
+ background-size: cover;
+ height:550px;
+}
+/*
+���X�g�g�̐ݒ��E�������E���g�̏c���𒆂��낦
+*/
+.headerUl{
+ align-items: center;
+ display: flex;
+ justify-content: flex-end;
+}
+/*
+���X�g�̐ݒ�
+*/
+.headerList{
+ padding: 0 10px;
+ /*text-shadow: -4px -4px 4px #ffffff;*/
+}
+/*
+���X�g�Ԃ̋��؂胉�C���̐ݒ�
+*/
+.headerList{
+ -moz-transform: skewX(150deg);
+ -webkit-transform: skewX(150deg);/*�Ԃ̐������X�g�S�̂�skew�ŌX�����A���̕����͎q�v�f�i������a�^�O�j�͓����l��-�ɂ��ČX�����㏑�����Ė߂�*/
+ border-right: 1px solid #fff;
+ transform: skewX(150deg);
+}
+/*
+���X�g�̍Ō����̒l��/������
+*/
+.headerList:last-child{
+�@border-right:�@none;
+}
+/*
+���X�g��a�^�O�i�����j�̑���
+*/
+.headerList a{
+ color: #fff;
+ display: block;
+ font-size: 18px;
+ font-weight: bold;
+ letter-spacing: 2px;
+ transform: skewX(-150deg);/*�e�v�f�̂������������̊p�x���߂�*/
+ text-shadow: 0 0 2px #ffffe0;
+ }
+/*
+���X�g��a�^�O�i�����j�z�o�[��
+*/
+.headerList a:hover{
+ display: block;
+ border-bottom: solid 1px #fff;
+}
+/*
+���X�g�̍Ōゾ���E�]���𑝂₷
+*/
+.headerList:last-child{
+  margin-right: 10px;/*���v25px�̗]��*/
+}
+/*
+�㕔���X�g�̏��]���E�����O���f�[�V�����E�������ݒ肷��
+*/
+.headerUlUp{
+ align-items: center;
+ height: 50px;
+}
+/*
+�������X�g�̏��]���E
+*/
+.headerUlUnder{
+ height:50px;
+}
+/*
+�㕔���X�g�̓����O���f�[�V�����E�������ݒ肷��
+*/
+.headerBlackBoxUp{
+ background-image: url("../img/headerBlackUp.png");
+ background-size: cover;
+ height: 50px;
+ opacity: 0.8;
+ width: 100%;
+}
+/*
+�������X�g�̓����O���f�[�V�����E�������ݒ肷��
+*/
+.headerBlackBoxUnder{
+ background-image: url("../img/headerBlackUnder.png");
+ background-size: cover;
+ height: 50px;
+ width: 100%;
+}
+/*
+���Έʒu�ݒ��̂��߂̐e�v�f
+(�q�v�f�F���S�i.logoBig)�E���̉摜(.mainBird)�E���\���{�^���i.reserve/.reserve span�j
+*/
+.parentBox{
+ height: 450px;
+ position: relative;
+}
+/*
+�w�b�_�[���X�g���̏����ȃ��S�̐ݒ�
+*/
+.logoSmall{
+ display: block;
+ margin-top: 3px;
+ width: 75px;
+ z-index: 99;
+}
+/*
+�傫�ȃ��S�̐ݒ�
+(�e�v�f�FparentBox(���Δz�u�{�b�N�X))
+*/
+.logoBig{
+ display: block;
+ margin-left: auto;/*��������*/
+ margin-right: auto;
+ left: 50%;
+ position: absolute;
+ top: 80%;
+ -webkit-transform: translate(-50%,-80%);
+  transform: translate(-50%,-80%);
+}
+/*
+���̉摜�ݒ�
+(�e�v�f�FparentBox(���Δz�u�{�b�N�X))
+*/
+.mainBird{
+ bottom: 90px;
+ display: block;/*�摜�𓮂������悤��*/
+ right: -30px;/*�摜�z�u�����߂�*/
+ position: absolute;
+}
+/*
+�\���{�^���̐ݒ�
+���Δz�u�E�ʒu�̐ݒ��E
+�i�e�v�f�FparentBox(���Δz�u�{�b�N�X))
+�i�q�v�f�Fspan�j
+*/
+.reserve{
+ background-image: url("../img/reserveBtn.png");/*�w�i�̐ݒ�*/
+ background-size: cover;
+ bottom: 360px;
+ display: block;/*�|�W�V�������������悤��*/
+ font-size: 18px;
+ font-weight: bold;
+ height: 60px;/*���F�w�i�̏c�ݒ�*/
+ position: absolute;
+ right: 0;/*�|�W�V���������߂�*/
+ text-decoration: none;/*�����̃����N�̑�������*/
+ width: 120px;/*���F�w�i�̉��ݒ�*/
+ }
+ /*
+ �\���{�^���z�o�[��*/
+.reserve:hover{}
+/*
+�u���\���v�̕��������F�w�i�̍��ォ���A�ǐ^�񒆂ɕ������z�u����
+(�e�e�v�f�FparentBox(���Δz�u�{�b�N�X))
+(�e�v�f�F#reserve�j
+*/
+.reserve span{
+ color: #fff;
+ left: 50%;
+ letter-spacing: 2px;
+ position: absolute;/*�e�v�f�i�u���b�N�v�f�j�̂ǐ^�񒆂̔z�u*/
+ top: 50%;
+ -webkit-transform : translate(-50%,-50%);
+ transform : translate(-50%,-50%);
+}
+
+/*---�����ʁ��g�s�b�N���m�̏c�Ԃ̗]��200px�Őݒ�--------------------------------------------------------*/
+.wrapper{
+ padding-top: 250px;
+}
+/*---10�N�����c���z���o�ɁB---------------------------------*/
+.forMemory{ float: right; font-size: 36px; line-height: 80px;}
+.forMemory img{ display: height: 65px; inline-block;}
+.ten{ font-size: 48px; font-weight: bold;}
+.euphemismLine{ display: block; height: 118px; position: absolute;
+ top: 10px; width: 100%; z-index: -1;}
+.euphemismWrapper{ height: 125px; padding-top: 85px;}
+
+/*---���ٓ��E���ӊό��n�̃C�x���g���� ---------------------------------*/
+.eventsWrapper{ text-align: center;}
+.wrapper h2{ font-size: 36px;padding-bottom: 30px;}
+.events{ display: flex; justify-content: space-around;}
+.eventsIcon{ border: solid 1.5px #333; display: inline-block; height:auto;}
+.events img{ display: block; height: 220px;width: 100%;}
+.eventsInfo dd{ color: #333; font-size: 20px; font-weight: bold; padding-top: 20px;}
+.eventsInfo dt:last-child{ padding-bottom: 20px;}
+.eventsIcon a :hover{ opacity: 0.7;}
+.eventsIcon{ width: 25.641%;}
+/*---���Ȃ��͉����y���݂����ł����H ---------------------------------*/
+.goalsWrapper{ text-align: center;}
+.goals{ display: flex; justify-content: space-around;}
+.goalsIcon {}
+.linkWrapper{ color: #333; font-size: 30px;font-weight: bold;}
+.linkWrapper:hover{ opacity: 0.7;}
+/*---���m�点 ---------------------------------*/
+.newsWrapper{}
+.newsWrapper h2{ text-align: center;}
+.news{ display: flex; justify-content: center;}
+.newsColumnLeft{ padding-right: 39px;}/*39�~2=78px�̊ԁ@%�Ȃ�(containerpx/39px)%*/
+.newsColumnLeft img{ margin:0 auto; display: block;}
+.newsColumnLeft a:hover{ color: #b22222; font-weight:bold;}
+.latestNews{ font-size: 24px; padding-top: 50px;}
+.newsExplain{ font-size: 16px;}
+.newsColumnRight{ padding-left: 39px;}/*39�~2=78px�̊ԁ@%�Ȃ�(containerpx/39px)%*/
+.newsColumnRight a:hover{ color: #b22222; font-weight:bold;}
+.newsList{ display: flex;}
+.newsListImg{ padding-bottom: 26px; padding-right: 18px;}
+.newsInfo p{ font-size: 18px;}
+
+/*---���W ---------------------------------*/
+.recommandWrapper{ text-align: center;}
+.recommandTytle{
+ background: -moz-linear-gradient(top, #fff2fa, #ffe6e7);
+ background: -webkit-linear-gradient(top, #fff2fa, #ffe6e7);
+ background: linear-gradient(to bottom, #fff2fa, #ffe6e7);
+ font-size: 36px;
+ font-weight: bold;
+ line-height: 140px;
+}
+.now{
+ background-image: url("../img/redFlower.png");
+ background-size:contain;
+ font-size: 72px;}
+.msgParentBox{ position: relative;}
+.imgArea{ position: absolute;left:40%;}
+.birdImg{
+ margin-top:90px;
+ margin-left:400px;
+}
+.flexCrossBox { display: flex; justify-content: center;}
+.mt-85{margin-top: 85px}
+.crossBox img{ display: block; height: 263px; width: 450px;}
+.crossBox{ background-color: #f4f9f7; height: 263px; font-size: 24px; width: 450px;}
+.crossBox img{ vertical-align: bottom;}
+.crossBox h4 { font-size: 24px; padding-top: 36px;}
+.crossBox p { font-size: 21px; padding-top: 45px;}
+.flexCrossBox:nth-child(even) { flex-direction: row-reverse;}
+.recommandMsg{ padding: 0 20px; text-align:left;}
+.more{ float: right; padding-right:20px;}
+.more a:hover{ color: blue;}
+/*---���o�����O�Ƀ`�F�b�N---------------------------------*/
+.checkWrapper{ text-align: center;}
+.checks img{display: inline-block;}
+.checks {
+  display: flex;
+  justify-content: space-around;
+  margin:0 auto;
+  }
+
+.forFirst{
+  font-size: 32px;
+  font-weight: bold;
+  text-align: right;
+}
+.forFirst a:hover{
+  color:purple;
+}
+/*---recuruit--------------------------------*/
+.recuruit img{
+  display: block;
+  margin: 0 auto;
+}
+
+/*---footer-------------------------------*/
+.footerBlackBoxUp{
+  background-color: #3f3f3f;
+  color:#fff;
+}
+.footerBlackBoxUp p{
+  font-size: 48px;
+  font-weight: bold;
+}
+.footerBlackBoxUp ul li{
+  font-size: 20px;
+}
+.footerBlackBoxUnder{
+  background-color: #202020;
+  color:#fff;
+}
+.tellInfo{
+ display: flex;
+ padding-top:14px;
+
+}
+.tel{
+padding-right: 20px;
+}
+.footerBlackBoxUnder ul li{
+  font-size: 28px;
+}
+.request{
+    padding-top: 30px;
+}
+.request a{
+  font-size: 24px;
+  color:#fff;
+}
+.footerInfo{
+  display:flex;
+  padding-top: 30px;
+}
+.footerInfo li{
+  padding-right: 40px;
+}
+.footerInfo li a{
+  color:#fff;
+  font-size: 24px;
+}
+.Rights{
+  text-align: center;
+  padding-top:50px;
+}
+.footerWidth{
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+
+/*---SecondPage-------------------------------*/
+/*---about.html-----------------------------*/
+/*---header-------------------------------*/
+.secondWrapper{
+ background-image: url("../img/imgFirst/mainSecondPage.jpg");
+ background-size: cover;
+ height:550px;
+}
+/*--greet-------------------------------*/
+.greet a{
+  font-size: 24px;
+}
+.greet a:hover{
+  font-weight: bold;
+  color:purple;
+  border-bottom: solid 1px purple;
+}
+.greet p{
+  font-size: 36px;
+  font-weight: bold;
+  padding-top: 50px;
+  text-align: center;
+}
+/*--aboutBox-------------------------------*/
+.aboutBox{
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.aboutBox:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.aboutImg p img{
+  display:block;
+  height: 320px;
+}
+.aboutContents{
+    height:320px;
+    width:41%;
+}
+.about{
+  position:relative;
+}
+.about h2{
+  border-bottom: solid 2px #333;
+  display: inline-block;
+  font-size: 32px;
+  padding-bottom: 0;
+  padding-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+  position: relative;
+  text-align: left;
+}
+.about img {
+  position:absolute;
+  right: 0;
+}
+.about p{
+  font-size: 20px;
+  padding:20px 30px;
+}
+.aboutFlower{
+  display: inline-block;
+  padding: 20px;
+}
+/*--greet waiting-------------------------------*/
+.waiting{
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+/*---SecondPage-------------------------------*/
+/*---first.html-----------------------------*/
+
+.container{
+  /*background-color: skyblue;*/
+}
+.stepBox{
+/*  background-color: red;*/
+  width:40%;
+  margin: 0 auto;
+  margin-top:40px;
+}
+.stepTytle{
+  font-size: 36px;
+  text-align:  left;
+  /*background-color: green;*/
+  width:35%;
+}
+.step{
+  font-size: 36px;
+  padding-bottom: 40px;
+  text-align: center;
+  border-bottom: 2px #333 solid;
+
+}
+.step span{
+  font-size: 24px;
+}
+.firstBox{
+  display:flex;
+  justify-content: center;
+  margin: 0 auto;
+  /*background-color: pink; 余裕あれば工夫したい*/
+}
+.firstImg{
+}
+.firstBox {
+/*background-color: pink;*/
+margin-bottom: 40px;
+}
+.firstImg p img{
+  display:block;
+  height: 320px;
+}
+.firstTytle{
+  font-size: 24px;
+  /*background-color:#fff;*/
+
+}
+.firstContents{
+    height:320px;
+    width:41%;
+    background-color: ;
+}
+.step1{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 39px;
+  /*background-color: green;*/
+}
+.step1 div{
+  background-color:;
+}
+.stepEx dl dt{
+  font-size: 24px;
+  font-weight: bold;
+}
+.stepEx dl dd{
+  font-size:24px;
+  margin-left:80px;
+}
+
+.fx{
+  float:right;
+  font-size: 24px;
+}
+.fx a{
+    color:purple;
+    font-weight: bold;
+}
+.fx a:hover{
+  border-bottom: solid 1px purple;
+}
+.option{
+  font-size: 24px;
+}
+.linkBox{
+  margin-top: 30px;
+}
